@@ -48,5 +48,5 @@ public class PathMover : MonoBehaviour
         }
     }
 }
-}
+
 // Color c= Color.Lerp(0,0,0); saját szín, lehet más szín is keverni
