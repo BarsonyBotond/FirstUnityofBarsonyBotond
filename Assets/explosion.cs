@@ -1,18 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class explosion : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] Camera camera;
+    [SerializeField] Transform cursor3D;
+    private void OnValidate()
     {
-        
+        camera = Camera.main;
+    }
+    private void Update()
+    {
+        Vector3 v = Input.mousePosition;
+        Ray ray = camera.ScreenPointToRay(v);
+        bool DoHit = Physics.Raycast(ray, out RaycastHit hit);
+        if (DoHit)
+            Debug.Log(hit.collider.name);
+        cursor3D.position = hit.point;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
