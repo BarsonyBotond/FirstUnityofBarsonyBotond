@@ -5,7 +5,8 @@ using UnityEngine;
 public class sript001 : MonoBehaviour
 {
     [SerializeField] float speed;
-
+    [SerializeField] float angularspeed;
+    [SerializeField]
     void Update()
     {
 
@@ -27,8 +28,9 @@ public class sript001 : MonoBehaviour
          Transform t= transform;
         Vector3 pos = t.position;
         t.position = pos;
-        Vector3 velocity = new Vector3(1, 0, 0);
-         */
+        Vector3 velocity = new Vector3(1, 0, 0); 
+        targetRotatiion = Quaternion.LookRotation(direction);
+         t.rotation = Quaternion.LookRotation(transform.rotation, targetRotation, angularSpeed)*/
 
     }
 

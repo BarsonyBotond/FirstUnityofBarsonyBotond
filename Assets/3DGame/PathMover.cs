@@ -1,4 +1,4 @@
-
+/*
 using UnityEngine;
 
 public class PathMover : MonoBehaviour
@@ -15,15 +15,15 @@ public class PathMover : MonoBehaviour
     Transform nextTarget;
     void Start()
     {
-        nextTarget = end;
-    }
 
+    }
+    nextTarget = end;
 
     void OndDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawSphere(start.position, 0.30023f);
-        Gizmos.DrawSphere(end.position, 0.30023f);
+        Gizmos.DrawSphere(start.position, 2.30023f);
+        Gizmos.DrawSphere(end.position, 2.30023f);
         Gizmos.DrawLine(start.position, end.position);
         // void OwnDrawnGizmos()
     }
@@ -47,6 +47,6 @@ public class PathMover : MonoBehaviour
 
         }
     }
-}
+}mbox */
 
 // Color c= Color.Lerp(0,0,0); saját szín, lehet más szín is keverni
